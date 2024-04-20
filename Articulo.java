@@ -1,4 +1,4 @@
-public abstract class Articulo {
+public  class Articulo {
     protected String nombre;
     protected String modelo;
     protected String descripcion;
