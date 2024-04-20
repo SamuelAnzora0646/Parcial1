@@ -7,8 +7,16 @@ public class Main {
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
         int opcion;
+        Telefono telefono1 = new Telefono("Samsum","A03", "Telefono smart", 200 );
+        Laptop laptop1 = new Laptop("Lenovo","Idepad1", "Portatil de escritorio", 5000);
+
+        articulos.add(telefono1);
+        articulos.add(laptop1);
+
+
+
         System.out.println("Bienvenido ");
-        //Codigo a repetir
+        //Codigo a repetir y capturar error
         try {
             do {
                 System.out.println("Que desea realizar");
@@ -73,7 +81,9 @@ public class Main {
     };
     public static void consultarProductos(ArrayList<Articulo> articulos){
         System.out.println();
+        int i = 1;
         for (Articulo articulo: articulos){
+            System.out.println("Id producto" + " " + i++);
             System.out.println(articulo.nombre);
             System.out.println(articulo.descripcion);
             System.out.println(articulo.modelo);
