@@ -2,7 +2,7 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class Main extends Inventario{
     private static ArrayList<Articulo> articulos = new ArrayList<>();
     private static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
@@ -21,7 +21,7 @@ public class Main {
             do {
                 System.out.println("Que desea realizar");
                 System.out.println("1. Registrar producto");
-                System.out.println("2. Consultar produtos");
+                System.out.println("2. Mostrar Inventario");
                 System.out.println("3. Modificar productos");
                 System.out.println("4. Salir");
                 System.out.print("Seleccione una opcion: ");
@@ -32,7 +32,7 @@ public class Main {
                         registrarProductos();
                         break;
                     case 2:
-                        consultarProductos(articulos);
+                        mostrarInventario(articulos);
                         break;
                     case 3:
                         modificarProductos();
@@ -79,7 +79,7 @@ public class Main {
 
 
     };
-    public static void consultarProductos(ArrayList<Articulo> articulos){
+    public static void mostrarInventario(ArrayList<Articulo> articulos){
         System.out.println();
         int i = 1;
         for (Articulo articulo: articulos){
